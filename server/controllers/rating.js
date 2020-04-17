@@ -18,7 +18,8 @@ async function getRatedSongsByUser (req, res) {
         const ratedSongsByUser = await db.Rating.findAll({
             where: {
                 userName: req.params.username
-            }
+            },
+            // attributes: [trackId] ---> in attributes we can specify the key-value pairs we want back
         });
         res.status(200);
         res.json(ratedSongsByUser);
