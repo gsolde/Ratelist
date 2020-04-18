@@ -4,7 +4,7 @@ const db = require('../models');
 
 async function getAllUsers (req, res) {
     try {
-        const userList = await db.User.findAll();
+        const userList = await db.User.findAll({});
         res.status(200);
         res.json(userList);
     } catch (error) {

@@ -1,8 +1,24 @@
 'use strict';
 
 const router = require('express').Router();
+const passport = require('passport');
 const user = require('./controllers/user');
 const rating = require('./controllers/rating');
+
+// auth with spotify
+router.get('/auth/spotify', passport.authenticate('spotify', {
+    scope: ['user-read-private', 'user-read-email', 'playlist-modify-private', 'user-modify-playback-state', 'user-read-recently-played'],
+    showDialog: true
+}));
+
+// authentication
+router.get(
+    '/callback',
+    passport.authenticate('spotify', { failureRedirect: '/login' }),
+    function(req, res) {
+      res.redirect(`http://localhost:3000?${req.user.accessToken}`);
+    }
+);
 
 router.get('/', (req, res) => res.send('This is working!'));
 router.get('/users', user.getAllUsers);
