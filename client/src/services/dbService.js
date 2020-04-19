@@ -1,22 +1,25 @@
-const url = 'https://api.spotify.com/v1';
+const url = 'https:localhost:3001';
 const search = window.location.search;
 const params = new URLSearchParams(search);
 const token = params.get('token');
-// const userName = params.get('username');
+const userName = params.get('username');
 
-function searchTracks (input) {
-    if (!input) return;
-    return spotifyRequest (`/search?q=${input}&type=track&limit=20`, {
-        method: 'GET',
-        Accept: 'application/json',
+
+function getAllRatings () {
+    return serverRequest ('/events')
+}
+
+function insertRating (body) {
+    return serverRequest (`/ratings`, {
+        method: 'POST',
         headers: {
             'Content-type': 'application/json',
-            'authorization': `Bearer ${token}`
-        }
+        },
+        body: JSON.stringify(body)
     })
 }
 
-function spotifyRequest (endpoint, options) {
+function serverRequest (endpoint, options) {
     return fetch(`${url}${endpoint}`, options)
         .then(res => res.status <= 400 ? res: Promise.reject(res))
         .then(res => res.json())
@@ -26,4 +29,4 @@ function spotifyRequest (endpoint, options) {
         }); 
 }
 
-module.exports = searchTracks
+module.exports = {getAllRatings, insertRating}

@@ -19,17 +19,16 @@ passport.use(
       callbackURL: process.env.SPOTIFY_REDIRECT_URI
     }, 
     function(accessToken, refreshToken, expires_in, profile, done) {
-
+      console.log('*************',accessToken)
       process.nextTick(async function() {
         const userExists = await db.User.findOne({
           where: {
-            userName: profile.username // returns null if !username
+            userName: profile.username
           },
         });
-        if (userExists === null) db.User.create({ userName: profile.username });
+        if (userExists === null) db.User.create({ userName: profile.username }); // if user does not exist, user stored in db.Users
         return done(null, {profile, accessToken, refreshToken, expires_in});
       });
-      
     }
   )
 );

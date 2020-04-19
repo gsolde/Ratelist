@@ -1,0 +1,21 @@
+.search_bar_container {
+}
+
+.input_field {
+
+    background-color: #282c34;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: white;
+    margin: 30px;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+}
+
+::placeholder{
+    font-size: 1rem;
+    color: lightgray;
+    opacity: 0.3;
+}

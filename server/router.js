@@ -16,7 +16,7 @@ router.get(
     '/callback',
     passport.authenticate('spotify', { failureRedirect: '/login' }),
     function(req, res) {
-      res.redirect(`http://localhost:3000?token=${req.user.accessToken}&username=${req.user.profile.username}`);
+      res.redirect(`http://localhost:3000/home?token=${req.user.accessToken}&username=${req.user.profile.username}`);
     }
 );
 
