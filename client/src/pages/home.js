@@ -23,7 +23,6 @@ function HomePage () {
         setTracks(res);
     }
 
-
     useEffect(() => {
         getTracks()
     },[]);

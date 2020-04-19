@@ -1,9 +1,4 @@
-const url = 'https:localhost:3001';
-const search = window.location.search;
-const params = new URLSearchParams(search);
-const token = params.get('token');
-const userName = params.get('username');
-
+const url = 'http://localhost:3001';
 
 function getAllRatings () {
     return serverRequest ('/events')
@@ -29,4 +24,6 @@ function serverRequest (endpoint, options) {
         }); 
 }
 
-module.exports = {getAllRatings, insertRating}
+module.exports = insertRating
+    
+// module.exports = getAllRatings
