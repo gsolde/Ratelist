@@ -45,11 +45,30 @@ async function getRatedSongsByUser (req, res) {
     }
 }
 
-async function insertRating (req, res) {
+async function insertOrUpdateRating (req, res) {
     try {
-        const addedRating = await db.Rating.create({ userName: req.body.userName, trackId: req.body.trackId, rating: req.body.rating });
-        res.status(201); 
-        res.json(addedRating);
+        const foundRating = await db.Rating.findOne({
+            where: {
+                userName: req.body.userName,
+                trackId: req.body.trackId
+            },
+        });
+        if(!foundRating) {
+            const addedRating = await db.Rating.create({ userName: req.body.userName, trackId: req.body.trackId, rating: req.body.rating });
+            res.status(201); 
+            res.json(addedRating);
+        } 
+        const addedRating = await db.Rating.update(
+            { rating: req.body.rating }, 
+            { where: 
+                {
+                    userName: req.body.userName,
+                    trackId: req.body.trackId
+                }
+            }
+            );
+            res.status(201);
+            res.json(addedRating);
     } catch (error) {
         console.log(error); //eslint-disable-line
         res.sendStatus(500);
@@ -59,6 +78,5 @@ async function insertRating (req, res) {
 module.exports = {
     getAllRatings,
     getRatedSongsByUser,
-    insertRating,
-    findRatingByUser
+    insertOrUpdateRating,
 }

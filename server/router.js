@@ -25,8 +25,7 @@ router.get('/users', user.getAllUsers);
 router.post('/users', user.insertUser);
 
 router.get('/ratings', rating.getAllRatings);
-router.post('/ratings/findOne', rating.findRatingByUser);
 router.get('/ratings/:username', rating.getRatedSongsByUser);
-router.post('/ratings', rating.insertRating);
+router.post('/ratings', rating.insertOrUpdateRating);
 
 module.exports = router;
