@@ -1,29 +1,26 @@
-// import React from 'react';
 import React, { useState, useEffect } from 'react';
-import searchTracks from '../services/spotifyService';
-import TrackList from '../components/trackList/trackList';
-import SearchBar from '../components/searchBar/searchBar';
 import './home.css';
 
 function HomePage () {
 
-    const [tracks, setTracks] = useState(null);
 
-    async function getTracks (input) {
-        const res = await searchTracks(input)
-        setTracks(res);
-    }
+    // const [tracks, setTracks] = useState(null);
 
-    useEffect(() => {
-        getTracks()
-    },[]);
+    // async function getTracks (input) {
+    //     const res = await searchTracks(input);
+    //     setTracks(res);
+    // }
+
+    // useEffect(() => {
+    //     getTracks()
+    // },[]);
 
     return (
         <div className="home">
-            <header>
-                <SearchBar getTracks={getTracks}/>
-            </header>
-            {tracks && <TrackList tracks={tracks} />}
+            <nav className='nav_container'>
+                <a className='home_button_' href="/home">Home</a> 
+                <a className='searchRate_button_' href="/searchRate">Search & Rate</a> 
+            </nav>
         </div>
     );
 }
