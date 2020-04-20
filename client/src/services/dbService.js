@@ -1,10 +1,10 @@
 const url = 'http://localhost:3001';
 
-function getAllRatings () {
+function GetAllRatings () {
     return serverRequest ('/events')
 }
 
-function insertRating (body) {
+function InsertRating (body) {
     return serverRequest (`/ratings`, {
         method: 'POST',
         headers: {
@@ -24,6 +24,5 @@ function serverRequest (endpoint, options) {
         }); 
 }
 
-module.exports = insertRating
+module.exports = {GetAllRatings, InsertRating}
     
-// module.exports = getAllRatings

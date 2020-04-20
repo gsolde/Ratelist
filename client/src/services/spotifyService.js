@@ -2,7 +2,6 @@ const url = 'https://api.spotify.com/v1';
 const search = window.location.search;
 const params = new URLSearchParams(search);
 const token = params.get('token');
-// const userName = params.get('username');
 
 function searchTracks (input) {
     if (!input) return;

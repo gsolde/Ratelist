@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import insertRating from '../../services/dbService'
+import { InsertRating } from '../../services/dbService'
 import './trackItem.css';
 
 const search = window.location.search;
@@ -9,7 +9,7 @@ const userName = params.get('username');
 function TrackItem (props) {
     
     //getting rating and trackID. Posting rating to db.
-    //TODO: should I create another component to 
+    //TODO: should I create another component with this posting to db functionality????
 
     const [trackId, setTrackId] = useState('');
     const [rating, setRating] = useState('');
@@ -19,9 +19,9 @@ function TrackItem (props) {
         setTrackId(e.target.getAttribute('data-trackid'));
     }
     
-    function handleSubmit (e) {
+    async function handleSubmit (e) {
         e && e.preventDefault();
-        if (trackId && rating) insertRating({userName, trackId, rating});
+        if (trackId && rating && userName) InsertRating({userName, trackId, rating});
         setTrackId('');
         setRating('');
     }
