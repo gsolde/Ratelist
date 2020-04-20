@@ -23,7 +23,7 @@ function SearchRate () {
                 <a className='home_button' href="/home">Home</a> 
                 <a className='searchRate_button' href="/searchRate">Search & Rate</a> 
             </nav>
-            <div className='search'>
+            <div className='search_bar'>
                 <SearchBar getTracks={getTracks}/>
             </div>
             {tracks && <TrackList tracks={tracks} />}

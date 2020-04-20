@@ -10,6 +10,10 @@ body {
     justify-content: space-between;
 }
 
+.search_bar {
+    padding-top: 15px;
+}
+
 .home_button {
     padding-left: 10px;
     padding-right: 10px;

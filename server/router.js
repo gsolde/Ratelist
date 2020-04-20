@@ -6,19 +6,21 @@ const user = require('./controllers/user');
 const rating = require('./controllers/rating');
 
 // auth with spotify
+
 router.get('/auth/spotify', passport.authenticate('spotify', {
     scope: ['user-read-private', 'user-read-email', 'playlist-modify-private', 'user-modify-playback-state', 'user-read-recently-played'],
     showDialog: true
 }));
 
-// authentication
 router.get(
     '/callback',
     passport.authenticate('spotify', { failureRedirect: '/login' }),
     function(req, res) {
-      res.redirect(`http://localhost:3000/home?token=${req.user.accessToken}&username=${req.user.profile.username}`);
+      res.redirect(`http://localhost:3000/credentials?token=${req.user.accessToken}&username=${req.user.profile.username}`);
     }
 );
+
+//interactions with db
 
 router.get('/', (req, res) => res.send('This is working!'));
 router.get('/users', user.getAllUsers);

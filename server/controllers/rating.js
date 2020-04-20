@@ -42,7 +42,7 @@ async function insertOrUpdateRating (req, res) {
             res.status(201); 
             res.json(addedRating);
         } 
-        const addedRating = await db.Rating.update(
+        const updatedRating = await db.Rating.update(
             { rating: req.body.rating }, 
             { where: 
                 {
@@ -52,7 +52,7 @@ async function insertOrUpdateRating (req, res) {
             }
             );
             res.status(201);
-            res.json(addedRating);
+            res.json(updatedRating);
     } catch (error) {
         console.log(error); //eslint-disable-line
         res.sendStatus(500);

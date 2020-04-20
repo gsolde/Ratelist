@@ -2,14 +2,11 @@ import React, { useState } from 'react';
 import { InsertRating } from '../../services/dbService'
 import './trackItem.css';
 
-const search = window.location.search;
-const params = new URLSearchParams(search);
-const userName = params.get('username');
+const userName = localStorage.getItem('userName')
 
 function TrackItem (props) {
     
     //getting rating and trackID. Posting rating to db.
-    //TODO: should I create another component with this posting to db functionality????
 
     const [trackId, setTrackId] = useState('');
     const [rating, setRating] = useState('');

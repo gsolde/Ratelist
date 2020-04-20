@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './home.css';
 
+// const search = window.location.search;
+// const params = new URLSearchParams(search);
+// const token = params.get('token');
+
+
 function HomePage () {
 
 
