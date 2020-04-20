@@ -13,22 +13,6 @@ async function getAllRatings (req, res) {
     }
 }
 
-async function findRatingByUser (req,res) {
-    try {
-        const ratingByUser = await db.Rating.findOne({
-            where: {
-                userName: req.body.userName,
-                trackId: req.body.trackId
-            },
-        });
-        res.status(200);
-        res.json(ratingByUser);
-    } catch (error) {
-        console.log(error); //eslint-disable-line
-        res.sendStatus(500);
-    }
-}
-
 async function getRatedSongsByUser (req, res) {
     try {
         const ratedSongsByUser = await db.Rating.findAll({
