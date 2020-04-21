@@ -20,7 +20,7 @@ function SearchRate () {
 
     return (
         <div className="searchRate">
-            <header className='header_container'>
+            <header className='searchRate_header_container'>
                 <nav className='nav_container'>
                     <a className='my_ratings_button' href="/home">My ratings</a> 
                     <a className='searchRate_button' href="/searchRate">Search & Rate</a> 
@@ -30,13 +30,6 @@ function SearchRate () {
                     <SearchBar className='search_input' getTracks={getTracks}/>
                 </div>
             </header>
-            <div>
-                {/* <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span> */}
-            </div>
             <div className='tracks'>
                 {tracks && <TrackList tracks={tracks} />}
             </div>

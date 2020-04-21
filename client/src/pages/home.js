@@ -43,7 +43,7 @@ function HomePage () {
         <div className="home">
             <header className='home_header_container'>
                 <nav className='nav_container'>
-                    <a className='home_button_' href="/home">My ratings</a> 
+                    <a className='myRatings_button_' href="/home">My ratings</a> 
                     <a className='searchRate_button_' href="/searchRate">Search & Rate</a> 
                     <a className='soulmates_button_' href="">Soulmates</a> 
                 </nav>
