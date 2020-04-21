@@ -1,0 +1,44 @@
+.image{
+    display:flex;
+    height: 40px;
+    width: 40px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.rating_container {
+    border: 1px solid white;
+    background-color: #92a2a8;
+    display: flex;
+    width: 500px;
+    margin-left: 150px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.rating_container:hover {
+}
+
+.track_info_rating {
+    display: flex;
+    flex-direction: column;
+}
+
+.track_details {
+    display: flex;
+    margin-top: 5px;
+    margin-left: 15px;
+    width: 350px;
+    flex-direction: column;
+    align-content: flex-end;
+}
+
+.track_name {
+    margin:0;
+    font-size: 1rem;
+}
+
+.album_name {
+    margin: 0;
+    font-size: 10px;
+}

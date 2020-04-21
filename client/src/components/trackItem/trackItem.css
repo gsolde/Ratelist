@@ -7,13 +7,14 @@ img {
 }
 
 .track_container {
+    border: 1px solid white;
     background-color: #484c55;
     display: flex;
     width: 500px;
     margin-left: 100px;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 10px 10px 17px -8px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 17px -8px black
 }
 
 .track_info_rating {
@@ -59,8 +60,8 @@ img {
     margin-top: 5px;
     align-self: center;
     color: white;
-    background-color: #1db954;
-    font-size: 10px;
+    background-color: rgb(128, 195, 236);
+    font-size: 11px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;

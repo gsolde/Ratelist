@@ -2,6 +2,16 @@ body {
     background-color: #282c34;
 }
 
+/* navigation */
+
+.home_header_container {
+    z-index: 2;
+    background-color: #282c34;
+    position: fixed;
+    width: 100%;
+    height: 100px
+}
+
 .nav_container {
     margin-top: 40px;
     margin-left: 150px;
@@ -16,7 +26,8 @@ body {
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 20px;
-    background-color: rgb(235, 190, 66);
+    background-color: rgb(241, 112, 123);  
+    border: 1px solid white; 
     text-decoration: none;
     font-size: 15px;
     color: white
@@ -28,10 +39,15 @@ body {
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 20px;
-    background-color: lightskyblue;
+    border: 1px solid white;
     text-decoration: none;
     font-size: 15px;
     color: white
+}
+
+.searchRate_button_:hover {
+    border: 1px solid rgb(241, 112, 123);
+    color: rgb(241, 112, 123)
 }
 
 .soulmates_button_ {
@@ -40,8 +56,30 @@ body {
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 20px;
-    background-color: lightskyblue;
+    border: 1px solid white;
     text-decoration: none;
     font-size: 15px;
     color: white
+}
+
+.soulmates_button_:hover {
+    border: 1px solid rgb(241, 112, 123);
+    color: rgb(241, 112, 123) 
+}
+
+.ratings_container {
+    z-index: 1;
+    position: absolute;
+    padding-top: 10px;
+    margin-top: 100px;
+    overflow: scroll;
+}
+
+.my_ratings_title {
+    margin-left: 150px;
+    margin-top: 50px;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 500px;
+    text-align: center;
 }

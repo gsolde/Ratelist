@@ -30,13 +30,16 @@ function HomePage () {
 
     return (
         <div className="home">
-            <nav className='nav_container'>
-                <a className='home_button_' href="/home">Home</a> 
-                <a className='searchRate_button_' href="/searchRate">Search & Rate</a> 
-                <a className='soulmates_button_' href="">Soulmates</a> 
-            </nav>
-            <button onClick={() => console.log('****',rateList)}></button>
-            {(rateList) && <RatedList ratedTracks={rateList} />}
+            <header className='home_header_container'>
+                <nav className='nav_container'>
+                    <a className='home_button_' href="/home">My ratings</a> 
+                    <a className='searchRate_button_' href="/searchRate">Search & Rate</a> 
+                    <a className='soulmates_button_' href="">Soulmates</a> 
+                </nav>
+            </header>
+            <div className='ratings_container'>
+                {(rateList) && <RatedList ratedTracks={rateList} />}
+            </div>
         </div>
     );
 }

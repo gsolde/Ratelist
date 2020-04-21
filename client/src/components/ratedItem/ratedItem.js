@@ -4,9 +4,9 @@ import './ratedItem.css';
 function RatedItem (props) {
 return (
     <div>
-        <div  className='track_container'>
+        <div  className='rating_container'>
             <div className='album_cover'>
-                <img src={`${props.track.album.images[0].url}`} alt='album cover'/>
+                <img className='image' src={`${props.track.album.images[0].url}`} alt='album cover'/>
             </div>
             <div className='track_info_rating'>
                 <div className='track_details'>
