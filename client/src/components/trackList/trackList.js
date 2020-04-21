@@ -10,7 +10,6 @@ function TrackList (props) {
             <TrackItem 
             track={track}
             key={index}
-        // addTopic={props.addTopic}
         />)}
     </div>)
 }

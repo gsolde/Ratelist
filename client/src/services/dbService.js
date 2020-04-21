@@ -1,7 +1,13 @@
 const url = 'http://localhost:3001';
 
+const userName = localStorage.getItem('userName')
+
 function GetAllRatings () {
-    return serverRequest ('/events')
+    return serverRequest ('/ratings')
+}
+
+function GetRatingsByUser () {
+    return serverRequest (`/ratings/${userName}`)
 }
 
 function InsertRating (body) {
@@ -24,5 +30,5 @@ function serverRequest (endpoint, options) {
         }); 
 }
 
-module.exports = {GetAllRatings, InsertRating}
+module.exports = {GetAllRatings, InsertRating, GetRatingsByUser}
     

@@ -1,31 +1,42 @@
 import React, { useState, useEffect } from 'react';
+import { GetRatingsByUser } from '../services/dbService';
+import { getTracks } from '../services/spotifyService';
+import RatedList from '../components/ratedList/ratedList';
 import './home.css';
-
-// const search = window.location.search;
-// const params = new URLSearchParams(search);
-// const token = params.get('token');
-
 
 function HomePage () {
 
+    const [trackIdList, setTrackIdList] = useState([]);
+    const [rateList, setRateList] = useState(null);
 
-    // const [tracks, setTracks] = useState(null);
-
-    // async function getTracks (input) {
-    //     const res = await searchTracks(input);
-    //     setTracks(res);
-    // }
-
-    // useEffect(() => {
-    //     getTracks()
-    // },[]);
+    async function getTrackIds () {
+        const res = await GetRatingsByUser();
+        const temp = [];
+        res.forEach((track) => {
+            temp.push(track.trackId)
+        })  
+        setTrackIdList([...trackIdList, ...temp]);
+        getRatedTracks (temp.reverse().join(','))
+    }
+    
+    async function getRatedTracks (trackIdList) {
+        const res = await getTracks(trackIdList);
+        setRateList(res);
+    }
+    
+    useEffect(() => {
+        getTrackIds()
+    },[]);
 
     return (
         <div className="home">
             <nav className='nav_container'>
                 <a className='home_button_' href="/home">Home</a> 
                 <a className='searchRate_button_' href="/searchRate">Search & Rate</a> 
+                <a className='soulmates_button_' href="">Soulmates</a> 
             </nav>
+            <button onClick={() => console.log('****',rateList)}></button>
+            {(rateList) && <RatedList ratedTracks={rateList} />}
         </div>
     );
 }

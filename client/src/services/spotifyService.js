@@ -4,7 +4,7 @@ const token = localStorage.getItem('token');
 
 function searchTracks (input) {
     if (!input) return;
-    return spotifyRequest (`/search?q=${input}&type=track&limit=20`, {
+    return spotifyRequest (`/search?q=${input}&type=track&limit=15`, {
         method: 'GET',
         Accept: 'application/json',
         headers: {
@@ -13,6 +13,18 @@ function searchTracks (input) {
         }
     })
 }
+
+function getTracks (input) {
+    return spotifyRequest (`/tracks?ids=${input}`, {
+        method: 'GET',
+        Accept: 'application/json',
+        headers: {
+            'Content-type': 'application/json',
+            'authorization': `Bearer ${token}`
+        }
+    })
+}
+
 
 function spotifyRequest (endpoint, options) {
     return fetch(`${url}${endpoint}`, options)
@@ -24,4 +36,4 @@ function spotifyRequest (endpoint, options) {
         }); 
 }
 
-module.exports = searchTracks
+module.exports =  {searchTracks, getTracks}
