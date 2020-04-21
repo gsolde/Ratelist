@@ -20,8 +20,8 @@ function HomePage () {
             trackIds.push(track.trackId)
             trackRatings.push(track.rating)
         })  
-        setTrackIdList(trackIds.reverse().join()); //latest rated tracks will be displayed first.
-        setTrackRatings(trackRatings.reverse()); //reversing ratings to match reversed trackIds array.
+        setTrackIdList(trackIds); //latest rated tracks will be displayed first.
+        setTrackRatings(trackRatings); //reversing ratings to match reversed trackIds array.
         
         const spotifyTrackList = await getTracks(trackIds);
         for (let i = 0; i < trackRatings.length; i++) { 
@@ -31,6 +31,9 @@ function HomePage () {
         setRateList(spotifyTrackList);
     }
     
+
+
+
 
     useEffect(() => {
         getTrackIds()
@@ -46,7 +49,7 @@ function HomePage () {
                 </nav>
             </header>
             <div className='ratings_container'>
-                {(rateList) && <RatedList ratedTracks={rateList} trackRatings={trackRatings} />}
+                {(rateList) && <RatedList className='rated_list' ratedTracks={rateList} trackRatings={trackRatings} />}
             </div>
         </div>
     );

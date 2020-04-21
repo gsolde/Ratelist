@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .image{
     display:flex;
     height: 50px;
@@ -7,14 +11,15 @@
 }
 
 .rating_container {
+    
     display: flex;
-    flex-direction: row;
     border: 1px solid white;
     background-color: #92a2a8;
     display: flex;
     width: 510px;
     margin-left: 150px;
     margin-bottom: 10px;
+    margin-top: 10px;
     border-radius: 10px;
 }
 

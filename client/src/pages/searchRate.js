@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactStars from 'react-stars'
 import { searchTracks } from '../services/spotifyService';
 import TrackList from '../components/trackList/trackList';
 import SearchBar from '../components/searchBar/searchBar';
@@ -30,11 +31,11 @@ function SearchRate () {
                 </div>
             </header>
             <div>
-                <span class="fa fa-star checked"></span>
+                {/* <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span> */}
             </div>
             <div className='tracks'>
                 {tracks && <TrackList tracks={tracks} />}

@@ -6,7 +6,16 @@ const userName = localStorage.getItem('userName')
 
 function TrackItem (props) {
     
-    //getting rating and trackID. Posting rating to db.
+    const [color, setColor] = useState('rgb(128, 195, 236)');
+    const [buttonText, setButtonText] = useState('Rate track');
+    const [borderColor, SetBorderColor] = useState('1px solid white')
+
+    function OnClickEvent () {
+        setColor("rgb(103, 182, 109)");
+        setButtonText('Rating saved')
+        SetBorderColor('1px solid rgb(103, 182, 109)')
+    }
+    
 
     const [trackId, setTrackId] = useState('');
     const [rating, setRating] = useState('');
@@ -16,7 +25,7 @@ function TrackItem (props) {
         setTrackId(e.target.getAttribute('data-trackid'));
     }
     
-    async function handleSubmit (e) {
+    function handleSubmit (e) {
         e && e.preventDefault();
         if (trackId && rating && userName) InsertRating({userName, trackId, rating});
         setTrackId('');
@@ -25,7 +34,7 @@ function TrackItem (props) {
 
 return (
     <div>
-        <div  className='track_container'>
+        <div  className='track_container' style={{border:borderColor}}>
             <div className='album_cover'>
                 <img src={`${props.track.album.images[0].url}`} alt='album cover'/>
             </div>
@@ -44,7 +53,11 @@ return (
                         data-trackid={props.track.id}
                         onChange={handleChange}
                     ></input>
-                    <button type='submit' className='rate_button'>Rate track</button>
+                    <button 
+                    style={{background:color}} 
+                    type='submit' 
+                    className='rate_button' 
+                    onClick={()=>{OnClickEvent()}}>{buttonText}</button>
                 </form>
             </div>
         </div>

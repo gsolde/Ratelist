@@ -19,7 +19,10 @@ async function getRatedSongsByUser (req, res) {
             where: {
                 userName: req.params.username
             },
-            attributes: ['trackId', 'rating'] 
+            order: [
+                ['updatedAt', 'DESC'],
+            ],
+            attributes: ['trackId', 'rating']
         });
         res.status(200);
         res.json(ratedSongsByUser);
@@ -52,7 +55,6 @@ async function insertOrUpdateRating (req, res) {
             }
             );
             res.status(201);
-            res.json(updatedRating);
     } catch (error) {
         console.log(error); //eslint-disable-line
         res.sendStatus(500);
