@@ -77,5 +77,6 @@ body {
     margin-top: 174px;
     margin-left: 50px;
     overflow: scroll;
+    scroll-behavior: smooth;
 }
 

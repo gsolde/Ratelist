@@ -7,23 +7,31 @@ import './home.css';
 function HomePage () {
 
     const [trackIdList, setTrackIdList] = useState([]);
+    const [trackRatings, setTrackRatings] = useState([]);
     const [rateList, setRateList] = useState(null);
 
     async function getTrackIds () {
+
         const res = await GetRatingsByUser();
-        const temp = [];
+        const trackIds = [];
+        const trackRatings = [];
+
         res.forEach((track) => {
-            temp.push(track.trackId)
+            trackIds.push(track.trackId)
+            trackRatings.push(track.rating)
         })  
-        setTrackIdList([...trackIdList, ...temp]);
-        getRatedTracks (temp.reverse().join(','))
+        setTrackIdList(trackIds.reverse().join()); //latest rated tracks will be displayed first.
+        setTrackRatings(trackRatings.reverse()); //reversing ratings to match reversed trackIds array.
+        
+        const spotifyTrackList = await getTracks(trackIds);
+        for (let i = 0; i < trackRatings.length; i++) { 
+            spotifyTrackList.tracks[i].rating = trackRatings[i]; //insert track rating to each track on spotify res obj.
+        }
+        
+        setRateList(spotifyTrackList);
     }
     
-    async function getRatedTracks (trackIdList) {
-        const res = await getTracks(trackIdList);
-        setRateList(res);
-    }
-    
+
     useEffect(() => {
         getTrackIds()
     },[]);
@@ -38,7 +46,7 @@ function HomePage () {
                 </nav>
             </header>
             <div className='ratings_container'>
-                {(rateList) && <RatedList ratedTracks={rateList} />}
+                {(rateList) && <RatedList ratedTracks={rateList} trackRatings={trackRatings} />}
             </div>
         </div>
     );

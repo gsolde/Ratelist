@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ratedItem.css';
 
 function RatedItem (props) {
+
+    console.log(props)
 return (
     <div>
         <div  className='rating_container'>
@@ -11,21 +13,10 @@ return (
             <div className='track_info_rating'>
                 <div className='track_details'>
                     <p className='track_name'>{props.track.name}</p>
-                    <p className='album_name'>{props.track.album.name}</p>
+                    <p className='album_name'>{props.track.album.name} - {props.track.artists[0].name}</p>
                 </div>
-                {/* <form className='track_rating' onSubmit={handleSubmit}>
-                    <input 
-                        className='rating_selector' 
-                        type='range' 
-                        id='rating' 
-                        min='0' 
-                        max='10'
-                        data-trackid={props.track.id}
-                        onChange={handleChange}
-                    ></input>
-                    <button type='submit' className='rate_button'>Rate track</button>
-                </form> */}
             </div>
+                <p className="rating">{props.track.rating}</p>
         </div>
     </div>
 )

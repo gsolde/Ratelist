@@ -32,7 +32,7 @@ return (
             <div className='track_info_rating'>
                 <div className='track_details'>
                     <p className='track_name'>{props.track.name}</p>
-                    <p className='album_name'>{props.track.album.name}</p>
+                    <p className='album_name'>{props.track.album.name} - {props.track.artists[0].name}</p>
                 </div>
                 <form className='track_rating' onSubmit={handleSubmit}>
                     <input 

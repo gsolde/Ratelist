@@ -14,7 +14,7 @@ function Credentials () {
   localStorage.setItem('userName', userName);
     
     return (
-        <Redirect to="/home" />
+        <Redirect to="/searchRate" />
       );
 
 }

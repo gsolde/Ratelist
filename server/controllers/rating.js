@@ -19,7 +19,7 @@ async function getRatedSongsByUser (req, res) {
             where: {
                 userName: req.params.username
             },
-            attributes: ['trackId'] 
+            attributes: ['trackId', 'rating'] 
         });
         res.status(200);
         res.json(ratedSongsByUser);
