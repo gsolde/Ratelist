@@ -31,10 +31,6 @@ function HomePage () {
         setRateList(spotifyTrackList);
     }
     
-
-
-
-
     useEffect(() => {
         getTrackIds()
     },[]);
