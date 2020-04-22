@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import ReactStars from 'react-stars'
 import { searchTracks } from '../services/spotifyService';
 import TrackList from '../components/trackList/trackList';
 import SearchBar from '../components/searchBar/searchBar';
@@ -24,7 +23,7 @@ function SearchRate () {
                 <nav className='nav_container'>
                     <a className='my_ratings_button' href="/home">My ratings</a> 
                     <a className='searchRate_button' href="/searchRate">Search & Rate</a> 
-                    <a className='soulmates_button'>Soulmates</a> 
+                    <a className='soulmates_button' href=''>Soulmates</a> 
                 </nav>
                 <div className='search_bar'>
                     <SearchBar className='search_input' getTracks={getTracks}/>

@@ -16,7 +16,7 @@
     border: 1px solid white;
     background-color: #92a2a8;
     display: flex;
-    width: 510px;
+    width: 450px;
     margin: auto;
     margin-top: 10px;
     border-radius: 10px;
@@ -24,13 +24,12 @@
 
 .track_info_rating {
     display: flex;
-    width: 400px;
+    width: 350px;
 }
 
 .track_details {
     padding: 3px;
     margin: 0px;
-    width: 350px;
 }
 
 .track_name {
