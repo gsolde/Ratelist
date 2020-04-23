@@ -10,7 +10,7 @@ function SearchBar(props) {
 
   useEffect(() => {
     props.getTracks(input);
-  });
+  }, [input]);
 
   return (
     <div className="search_bar_container">
