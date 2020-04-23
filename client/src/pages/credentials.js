@@ -1,22 +1,20 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
 
 
-function Credentials () {
-  
-  const search = window.location.search;
+function Credentials() {
+  const { search } = window.location;
   const params = new URLSearchParams(search);
-  
+
   const token = params.get('token');
   const userName = params.get('username');
 
   localStorage.setItem('token', token);
   localStorage.setItem('userName', userName);
-    
-    return (
-        <Redirect to="/searchRate" />
-      );
 
+  return (
+    <Redirect to="/searchRate" />
+  );
 }
 
-export default Credentials
+export default Credentials;

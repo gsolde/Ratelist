@@ -3,12 +3,12 @@ const passport = require('passport');
 const db = require('../models');
 require('dotenv').config();
 
-passport.serializeUser(function(user, done) {
-    done(null, user);
+passport.serializeUser((user, done) => {
+  done(null, user);
 });
 
-passport.deserializeUser(function(obj, done) {
-    done(null, obj);
+passport.deserializeUser((obj, done) => {
+  done(null, obj);
 });
 
 passport.use(
@@ -16,19 +16,20 @@ passport.use(
     {
       clientID: process.env.SPOTIFY_CLIENT_ID,
       clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
-      callbackURL: process.env.SPOTIFY_REDIRECT_URI
-    }, 
-    function(accessToken, refreshToken, expires_in, profile, done) {
-      process.nextTick(async function() { // if user does not exist, user stored in db.Users
+      callbackURL: process.env.SPOTIFY_REDIRECT_URI,
+    },
+    ((accessToken, refreshToken, expires_in, profile, done) => {
+      process.nextTick(async () => { // if user does not exist, user stored in db.Users
         const userExists = await db.User.findOne({
           where: {
-            userName: profile.username
+            userName: profile.username,
           },
         });
-        if (userExists === null) db.User.create({ userName: profile.username }); 
-        return done(null, {profile, accessToken, refreshToken, expires_in});
+        if (userExists === null) db.User.create({ userName: profile.username });
+        return done(null, {
+          profile, accessToken, refreshToken, expires_in,
+        });
       });
-    }
-  )
+    }),
+  ),
 );
-      
