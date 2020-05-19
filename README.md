@@ -7,7 +7,6 @@
   <div align='center'>
     <img src="client/src/assets/search.png" width=850 alt="search">
   </div>
-  <br></br>
   <div align='center'>
     <img src="client/src/assets/rating_selection.png" width=280 height=450 alt="rating selection">
     <img src="client/src/assets/rated_song.png" width=280 height=450 alt="rated song">
