@@ -55,13 +55,15 @@ The app is built in React on the front-end, and the back-end is powered by Node.
 ## Observations
 
 - **To be improved**
-    - Make the app responsive
+
+    - Make the app responsive.
+    - Rethink the UI. Everything could be displayed in the same page and it would look better.
+    - Redirection process after successful spotify login needs to be polished. User information is passed in the url.
+    
 - **Future features**
-
-
-
-
-
-
-
-
+  
+    - Testing.
+    - Rated songs filtering and spotify playlist creation based on it and/or on track selection.
+    - Soulmate algorythm implementation.
+    - Automatic playlist creation based on soulmate preferences.
+    - Rating stats & graphics with genre information vs rating, etc.
