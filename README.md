@@ -22,19 +22,49 @@ The app is built in React on the front-end, and the back-end is powered by Node.
 
 ## Run the app
 
-#### 1. Get a Client ID and a Client Secret from Spotify.
+<details>
+  
+<summary>Instructions</summary>
+ 
+- **1. Get a Client ID and a Client Secret from Spotify**
 
    First of all we will need a Client ID and a Client Secret from Spotify if we want to be able to use their API.
    We will need a Spotify account to create an app on their developer's site, but the process is pretty straightforward          and it will not take more than 5 minutes.
 
    You can follow this tutorial: https://developer.spotify.com/documentation/general/guides/app-settings/#register-your-app
-   
-#### 2. Fork and clone the repository 
-#### 3. 
 
+- **2. Create a database named 'ratelist' from the postgreSQL shell.**
+- **3. Fork and clone the repository.**
+- **4. Create a .env file in /server providing the information needed.**
+    
+    ```txt
+    SPOTIFY_CLIENT_ID = 'copy client id here'
+    SPOTIFY_CLIENT_SECRET = 'copy client secret here'
+    SPOTIFY_REDIRECT_URI = 'http://localhost:3001/callback'
 
+    PSQL_USER = 'user name' 
+    PSQL_PASSWORD = 'password'
 
+    PORT = 'port'
+    ```
+- **5. Run "npm install" in /ratelist (root).**
+- **6. Run "nodemon" in /server.**
+- **7. Run "npm start" in /ratelist (root).**
 
+</details>
 
+## Observations
 
+- **To be improved**
 
+    - Make the app responsive.
+    - Rethink the UI. Everything could be displayed in the same page and it would look better.
+    - Redirection process after successful spotify login needs to be polished. User information is passed in the url.
+    
+- **Future features**
+  
+    - Testing.
+    - Rated songs filtering and spotify playlist creation based on it and/or on track selection.
+    - Soulmate algorythm implementation.
+    - Automatic playlist creation based on soulmate preferences.
+    - Rating stats & graphics with genre information vs rating, etc.
