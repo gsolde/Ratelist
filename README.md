@@ -24,10 +24,11 @@ The app is built in React on the front-end, and the back-end is powered by Node.
 
 #### 1. Get a Client ID and a Client Secret from Spotify.
 
-        First of all we will need a Client ID and a Client Secret from Spotify if we want to be able to use their API.
-        We will need a Spotify account to create an app on their developer's site, but the process is pretty straightforward           and it will not take more than 5 minutes.
+   First of all we will need a Client ID and a Client Secret from Spotify if we want to be able to use their API.
+   We will need a Spotify account to create an app on their developer's site, but the process is pretty straightforward          and it will not take more than 5 minutes.
 
-        Please follow this tutorial: https://developer.spotify.com/documentation/general/guides/app-settings/#register-your-app
+   You can follow this tutorial: https://developer.spotify.com/documentation/general/guides/app-settings/#register-your-app
+   
 #### 2. Fork and clone the repository 
 
 
