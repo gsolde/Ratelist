@@ -3,7 +3,6 @@ const express = require('express');
 const cors = require('cors');
 const passport = require('passport');
 const router = require('./router');
-const dbConnection = require('./models/index.js');
 const spotifyAuthSetup = require('./services/spotify');
 require('dotenv').config();
 
