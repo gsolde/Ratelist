@@ -37,6 +37,7 @@ The app is built in React on the front-end, and the back-end is powered by Node.
 - **3. Fork and clone the repository.**
 - **4. Create a .env file in /server providing the information needed.**
     
+    ```txt
     SPOTIFY_CLIENT_ID = 'copy client id here'
     SPOTIFY_CLIENT_SECRET = 'copy client secret here'
     SPOTIFY_REDIRECT_URI = 'http://localhost:3001/callback'
@@ -45,6 +46,7 @@ The app is built in React on the front-end, and the back-end is powered by Node.
     PSQL_PASSWORD = 'password'
 
     PORT = 'port'
+    
     
 - **5. Run "npm install" in /ratelist (root).**
 - **6. Run "nodemon" in /server.**
