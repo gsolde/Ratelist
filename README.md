@@ -22,6 +22,8 @@ The app is built in React on the front-end, and the back-end is powered by Node.
 
 ## Run the app
 
+<summary>"Click to expand"</summary>
+
 - **1. Get a Client ID and a Client Secret from Spotify**
 
    First of all we will need a Client ID and a Client Secret from Spotify if we want to be able to use their API.
@@ -45,6 +47,7 @@ The app is built in React on the front-end, and the back-end is powered by Node.
 - **5. Run "npm install" in /ratelist (root).**
 - **6. Run "nodemon" in /server.**
 - **7. Run "npm start" in /ratelist (root).**
+
 
 
 
