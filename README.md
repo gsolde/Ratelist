@@ -18,7 +18,8 @@ More features will be added soon. Stay tuned!
 
 ## Tech stack
 
-The app is built in React on the front-end, and the back-end is powered by Node.js, Express.js, Sequelize and PostgreSQL. Authorisation is implemented with Passport.js.
+- Front-end: React
+- Back-end: Node.js, Express.js, Sequelize and PostgreSQL. Authorisation implemented with Passport.js.
 
 ## Run the app
 
