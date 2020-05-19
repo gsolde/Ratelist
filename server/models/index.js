@@ -5,7 +5,7 @@ const Sequelize = require('sequelize');
 
 const basename = path.basename(__filename);
 
-const db = new Sequelize('ratelist', 'gerardsoldevila', '1234', {
+const db = new Sequelize('ratelist', process.env.PSQL_USER, process.env.PSQL_PASSWORD, {
   host: 'localhost',
   dialect: 'postgres',
 
