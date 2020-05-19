@@ -5,11 +5,11 @@
   <br></br>
   <img src="client/src/assets/search.png" alt="search">
   <br></br>
-  <img src="client/src/assets/rating_selection.png" alt="rating selection">
+  <img src="client/src/assets/rating_selection.png" width=280 alt="rating selection">
   <br></br>
-  <img src="client/src/assets/rated_song.png" alt="rated song">
+  <img src="client/src/assets/rated_song.png" width=280 alt="rated song">
   <br></br>
-  <img src="client/src/assets/rated_songs_list.png" alt="rated songs list">
+  <img src="client/src/assets/rated_songs_list.png" width=280 alt="rated songs list">
   <br></br>
 </div>
 
