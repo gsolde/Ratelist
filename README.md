@@ -2,7 +2,7 @@
 
 <div>
   <div align='center'>
-    <img src="client/src/assets/login.png" width=800 alt="login">
+    <img src="client/src/assets/login.png" width=900 alt="login">
   </div>
   <br></br>
   <div align='center'>
