@@ -29,7 +29,7 @@ The app is built in React on the front-end, and the back-end is powered by Node.
 
    You can follow this tutorial: https://developer.spotify.com/documentation/general/guides/app-settings/#register-your-app
 
-- **2. Create a database named 'ratelist' from the postgreSQL shell. **
+- **2. Create a database named 'ratelist' from the postgreSQL shell.**
 - **3. Fork and clone the repository.**
 - **4. Run "npm install" in /ratelist (root).**
 - **5. Run "npm start" in /ratelist (root).**
