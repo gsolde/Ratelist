@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm install --prefix server && npm install --prefix client && nodemon --prefix server && npm start --prefix client"
+    "install": "npm install --prefix server && npm install --prefix client"
   },
   "repository": {
     "type": "git",
