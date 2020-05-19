@@ -2,7 +2,6 @@ import React from 'react';
 import './ratedItem.css';
 
 function RatedItem(props) {
-  console.log(props);
   return (
     <div>
       <div className="rating_container">

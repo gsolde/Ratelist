@@ -6,12 +6,15 @@ function RatedList(props) {
   const { tracks } = props.ratedTracks;
   return (
     <div className="ratedList">
-      {tracks.map((track, index) => (
+      {tracks ? tracks.map((track, index) => (
         <RatedItem
           track={track}
           key={index}
         />
-      ))}
+        ))
+        : 
+        <p className='no-ratings'>No ratings yet!</p>
+      }
     </div>
   );
 }

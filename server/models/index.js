@@ -26,8 +26,6 @@ db
     console.error('! database connection error !', err);
   });
 
-// readDirSync reads files in models folder
-
 fs
   .readdirSync(__dirname)
   .filter((file) => (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js'))
@@ -36,6 +34,6 @@ fs
     db[model.name] = model;
   });
 
-db.sync(); // {force:true} to drop the tables (if changes on the models are made)
+db.sync(); // {force:true} drops the tables
 
 module.exports = db;
