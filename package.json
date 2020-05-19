@@ -1,0 +1,20 @@
+{
+  "name": "ratelist",
+  "version": "1.0.0",
+  "description": "<div>   <div align='center'>     <img src=\"client/src/assets/login.png\" width=850 alt=\"login\">   </div>   <div align='center'>     <img src=\"client/src/assets/rating_selection.png\" width=280 height=450 alt=\"rating selection\">     <img src=\"client/src/assets/rated_song.png\" width=280 height=450 alt=\"rated song\">     <img src=\"client/src/assets/rated_songs_list.png\" width=280 height=450 alt=\"rated songs list\">   </div> </div>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm install --prefix server && npm install --prefix client && nodemon --prefix server && npm start --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsolde/Ratelist.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gsolde/Ratelist/issues"
+  },
+  "homepage": "https://github.com/gsolde/Ratelist#readme"
+}
