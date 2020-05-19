@@ -22,7 +22,26 @@ The app is built in React on the front-end, and the back-end is powered by Node.
 
 ## Run the app
 
+<details>
+  
 <summary>"Click to expand"</summary>
+ 
+- [Why markdown?](#why-markdown)
+- [Markdown basics](#markdown-basics)
+- [Advanced Formatting tips](#advanced-formatting-tips)
+  * [`left` alignment](#left-alignment)
+  * [`right` alignment](#right-alignment)
+  * [`center` alignment example](#center-alignment-example)
+  * [`collapse` Sections](#collapse-sections)
+  * [`additional links`](#additional-links)
+  * [Badges](#badges)
+- [Useful packages](#useful-packages)
+- [Useful utilities](#useful-utilities)
+- [How Serverless uses markdown](#how-serverless-uses-markdown)
+  * [DEMO](#demo)
+- [Other Markdown Resources](#other-markdown-resources)
+
+</details>
 
 - **1. Get a Client ID and a Client Secret from Spotify**
 
