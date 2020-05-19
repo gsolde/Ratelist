@@ -63,8 +63,8 @@ The app is built in React on the front-end, and the back-end is powered by Node.
     
 - **Future features**
   
-    - Testing.
-    - Rated songs filtering and spotify playlist creation based on it and/or on track selection.
+    - Implement testing.
+    - Rated songs filtering and spotify playlist creation based on track selection.
     - Soulmate algorythm implementation.
     - Automatic playlist creation based on soulmate preferences.
     - Rating stats & graphics with genre information vs rating, etc.
