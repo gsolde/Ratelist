@@ -1,7 +1,7 @@
 # Ratelist
 
 <div>
-  <img src="client/src/assets/login.png" alt="login">
+  <img src="client/src/assets/Login.png" alt="login">
   <br></br>
   <img src="client/src/assets/search.png" alt="search">
   <br></br>
