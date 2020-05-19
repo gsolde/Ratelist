@@ -4,6 +4,9 @@
   <div align='center'>
     <img src="client/src/assets/login.png" width=850 alt="login">
   </div>
+  <div align='center'>
+    <img src="client/src/assets/search.png" width=850 alt="search">
+  </div>
   <br></br>
   <div align='center'>
     <img src="client/src/assets/rating_selection.png" width=280 height=450 alt="rating selection">
