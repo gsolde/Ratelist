@@ -20,6 +20,16 @@ More features will be added soon. Stay tuned!
 
 The app is built in React on the front-end, and the back-end is powered by Node.js, Express.js, Sequelize and PostgreSQL. Authorisation is implemented with Passport.js.
 
+## Run the app
+
+First of all you will need a Client ID and a Client Secret from Spotify. 
+You will need to register an app on their developer's website. 
+Here is a pretty straightforward tutorial you can follow: https://developer.spotify.com/documentation/general/guides/app-settings/#register-your-app
+
+
+### 1. Fork and clone the repository.
+### 2. 
+
 
 
 
