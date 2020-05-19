@@ -30,6 +30,7 @@ The app is built in React on the front-end, and the back-end is powered by Node.
    You can follow this tutorial: https://developer.spotify.com/documentation/general/guides/app-settings/#register-your-app
    
 #### 2. Fork and clone the repository 
+#### 3. 
 
 
 
