@@ -46,8 +46,7 @@ The app is built in React on the front-end, and the back-end is powered by Node.
     PSQL_PASSWORD = 'password'
 
     PORT = 'port'
-    
-    
+    ```
 - **5. Run "npm install" in /ratelist (root).**
 - **6. Run "nodemon" in /server.**
 - **7. Run "npm start" in /ratelist (root).**
