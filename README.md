@@ -55,7 +55,7 @@ The app is built in React on the front-end, and the back-end is powered by Node.
 ## Observations
 
 - **To be improved**
-    - **Make the app responsive**
+    - Make the app responsive
 - **Future features**
 
 
