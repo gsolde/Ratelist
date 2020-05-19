@@ -1,7 +1,7 @@
 # Ratelist
 
 <div>
-  <img src="client/src/assets/login.png" alt="login">
+  <img align='center' src="client/src/assets/login.png" width=800 alt="login">
   <br></br>
   <div align='center'>
   <img src="client/src/assets/rating_selection.png" width=280 height=450 alt="rating selection">
