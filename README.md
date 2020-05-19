@@ -24,25 +24,8 @@ The app is built in React on the front-end, and the back-end is powered by Node.
 
 <details>
   
-<summary>"Click to expand"</summary>
+<summary>Instructions</summary>
  
-- [Why markdown?](#why-markdown)
-- [Markdown basics](#markdown-basics)
-- [Advanced Formatting tips](#advanced-formatting-tips)
-  * [`left` alignment](#left-alignment)
-  * [`right` alignment](#right-alignment)
-  * [`center` alignment example](#center-alignment-example)
-  * [`collapse` Sections](#collapse-sections)
-  * [`additional links`](#additional-links)
-  * [Badges](#badges)
-- [Useful packages](#useful-packages)
-- [Useful utilities](#useful-utilities)
-- [How Serverless uses markdown](#how-serverless-uses-markdown)
-  * [DEMO](#demo)
-- [Other Markdown Resources](#other-markdown-resources)
-
-</details>
-
 - **1. Get a Client ID and a Client Secret from Spotify**
 
    First of all we will need a Client ID and a Client Secret from Spotify if we want to be able to use their API.
@@ -66,6 +49,10 @@ The app is built in React on the front-end, and the back-end is powered by Node.
 - **5. Run "npm install" in /ratelist (root).**
 - **6. Run "nodemon" in /server.**
 - **7. Run "npm start" in /ratelist (root).**
+
+</details>
+
+
 
 
 
