@@ -25,7 +25,6 @@ function getTracks(input) {
   });
 }
 
-
 function spotifyRequest(endpoint, options) {
   return fetch(`${url}${endpoint}`, options)
     .then((res) => (res.status <= 400 ? res : Promise.reject(res)))
