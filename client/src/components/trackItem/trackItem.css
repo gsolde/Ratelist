@@ -35,7 +35,7 @@ img {
     width: 350px;
     flex-direction: column;
     align-content: flex-end;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
 }
 
 .track_name {
@@ -60,15 +60,38 @@ img {
 }
 
 .rating_selector {
+    -webkit-appearance: none;
     margin-bottom: 10px;
     align-self: center;
     width: 200px;
+    height: 3px;
+    outline: none;
+    border-radius: 5px;
+    opacity: 0.95;
+    cursor: pointer;
+    box-shadow: 0px 1px 1px 0px #282c34;
+}
+
+.rating_selector:hover {
+    opacity: 1;
+}
+
+.rating_selector::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #92a2a8;
+    border: 1px solid white;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 1px 0px #282c34;
 }
 
 .rate_button {
     align-self: center;
     color: white;
     font-size: 11px;
+    margin-top: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
