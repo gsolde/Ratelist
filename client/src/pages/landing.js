@@ -8,7 +8,7 @@ function LandingPage() {
         <h1>RateList</h1>
         <p>Rate songs and find your soulmates</p>
         <button className="login_button" onClick={(e) => { e.preventDefault(); window.location.href = 'http://localhost:3001/auth/spotify'; }}>
-          Login to Spotify
+          Login with Spotify
         </button>
       </header>
     </div>
