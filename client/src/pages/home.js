@@ -17,14 +17,15 @@ function HomePage() {
   //! *** END OF TEST CODE ***
 
   async function getTrackIds(flag) {
+    let res = [];
     const trackIds = [];
     const trackRatings = [];
     const sortingCode = flag;
-    let res;
 
     if (sortingCode === 1) {
       res = await GetRatingsByUser()
       setSorting('date');
+      console.log(res);
     } else {
       res = await GetSortedRatingsByUser()
       setSorting('rating');
