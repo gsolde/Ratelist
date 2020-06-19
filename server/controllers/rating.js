@@ -31,6 +31,25 @@ async function getRatedSongsByUser(req, res) {
   }
 }
 
+async function getSortedRatingsByUser(req, res) {
+  try {
+    const ratedSongsByUser = await db.Rating.findAll({
+      where: {
+        userName: req.params.username,
+      },
+      order: [
+        ['rating', 'DESC'],
+      ],
+      attributes: ['trackId', 'rating'],
+    });
+    res.status(200);
+    res.json(ratedSongsByUser);
+  } catch (error) {
+        console.log(error); //eslint-disable-line
+    res.sendStatus(500);
+  }
+}
+
 async function insertOrUpdateRating(req, res) {
   try {
     const foundRating = await db.Rating.findOne({
@@ -65,4 +84,5 @@ module.exports = {
   getAllRatings,
   getRatedSongsByUser,
   insertOrUpdateRating,
+  getSortedRatingsByUser,
 };

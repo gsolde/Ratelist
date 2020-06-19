@@ -10,6 +10,10 @@ function GetRatingsByUser() {
   return serverRequest(`/ratings/${userName}`);
 }
 
+function GetSortedRatingsByUser() {
+  return serverRequest(`/sortedRatings/${userName}`);
+}
+
 function InsertRating(body) {
   return serverRequest('/ratings', {
     method: 'POST',
@@ -30,4 +34,4 @@ function serverRequest(endpoint, options) {
     });
 }
 
-module.exports = { GetAllRatings, InsertRating, GetRatingsByUser };
+module.exports = { GetAllRatings, InsertRating, GetRatingsByUser, GetSortedRatingsByUser };

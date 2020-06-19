@@ -27,6 +27,7 @@ router.post('/users', user.insertUser);
 
 router.get('/ratings', rating.getAllRatings);
 router.get('/ratings/:username', rating.getRatedSongsByUser);
+router.get('/sortedRatings/:username', rating.getSortedRatingsByUser);
 router.post('/ratings', rating.insertOrUpdateRating);
 
 module.exports = router;

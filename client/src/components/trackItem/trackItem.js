@@ -61,7 +61,7 @@ function TrackItem(props) {
               style={{ background: color }}
               type="submit"
               className="rate_button"
-              onClick={() => { OnClickEvent(); }}
+              onClick={() => { OnClickEvent() }}
             >
               {rating}
             </button>
