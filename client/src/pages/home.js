@@ -25,7 +25,6 @@ function HomePage() {
     if (sortingCode === 1) {
       res = await GetRatingsByUser()
       setSorting('date');
-      console.log(res);
     } else {
       res = await GetSortedRatingsByUser()
       setSorting('rating');
