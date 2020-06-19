@@ -5,10 +5,9 @@ import RatedList from '../components/ratedList/ratedList';
 import './home.css';
 
 function HomePage() {
-  const [trackIdList, setTrackIdList] = useState([]);
-  const [trackRatings, setTrackRatings] = useState([]);
+
   const [rateList, setRateList] = useState(null);
-  const [sorted, setSorted] = useState(false)
+  const [sorting, setSorting] = useState('date');
 
   //! *** TEST CODE FROM HERE ON ***
 
@@ -18,16 +17,18 @@ function HomePage() {
   //! *** END OF TEST CODE ***
 
   async function getTrackIds(flag) {
-    let sortingCode = flag
-    let res;
-    if (sortingCode === 1) {
-      res = await GetRatingsByUser()
-    } else {
-      res = await GetSortedRatingsByUser()
-    }
-    console.log(sorted);
     const trackIds = [];
     const trackRatings = [];
+    const sortingCode = flag;
+    let res;
+
+    if (sortingCode === 1) {
+      res = await GetRatingsByUser()
+      setSorting('date');
+    } else {
+      res = await GetSortedRatingsByUser()
+      setSorting('rating');
+    }
 
     res.forEach((track) => {
       trackIds.push(track.trackId);
@@ -54,9 +55,11 @@ function HomePage() {
           <a className="searchRate_button_" href="/searchRate">Search & Rate</a>
           <a className="soulmates_button_" href="">Soulmates</a>
         </nav>
-        <button onClick={() => { getTrackIds(0) }}>Sort by rating</button>
-        <button onClick={() => { getTrackIds(1) }}>Sort by latest</button>
       </header>
+      <div className="sorting_buttons_container">
+        <button className= {sorting === 'date' ? "selected_sorting_button" : "sorting_button"} onClick={() => { getTrackIds(1) }}>Sort by date</button>
+        <button className={sorting === 'rating' ? "selected_sorting_button" : "sorting_button"} onClick={() => { getTrackIds(0) }}>Sort by rating</button>
+      </div>
       <div className="ratings_container">
         {(rateList) && <RatedList className="rated_list" ratedTracks={rateList} />}
       </div>
