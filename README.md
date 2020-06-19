@@ -13,7 +13,7 @@
 
 ## What is Ratelist?
 
-Ratelist allows you to search songs in Spotify API and rate them. Built in a week.
+Ratelist allows you to search songs in Spotify API and rate them.
 More features will be added soon. Stay tuned! 
 
 ## Tech stack
@@ -59,7 +59,7 @@ More features will be added soon. Stay tuned!
 - **To be improved**
 
     - Make the app responsive.
-    - Rethink the UI. Everything could be displayed in the same page and it would look better.
+    - Rethink the UI.
     - Redirection process after successful spotify login needs to be polished. User information is passed in the url.
     
 - **Future features**
@@ -68,4 +68,4 @@ More features will be added soon. Stay tuned!
     - Rated songs filtering and spotify playlist creation based on track selection.
     - Soulmate algorythm implementation.
     - Automatic playlist creation based on soulmate preferences.
-    - Rating stats & graphics with genre information vs rating, etc.
+    - Rating stats & graphics in a dashboard with genre information vs rating, etc.
