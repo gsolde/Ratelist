@@ -76,14 +76,14 @@ body {
 .sorting_buttons_container {
     z-index: 2;
     background-color: #282c34;
-    display: flex;
-    justify-content: space-between;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 80px;
     position:fixed;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 60px;
+    padding: 10px;
 }
 
 .sorting_button {
@@ -135,8 +135,9 @@ body {
 .ratings_container {
     z-index: 1;
     position: absolute;
-    margin-top: 150px;
+    margin-top: 140px;
     width: 100vw;
     overflow: scroll;
     scroll-behavior: smooth;
+    transition: 1s;
 }
