@@ -139,5 +139,4 @@ body {
     width: 100vw;
     overflow: scroll;
     scroll-behavior: smooth;
-    transition: 1s;
 }
