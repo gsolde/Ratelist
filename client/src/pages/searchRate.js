@@ -24,10 +24,8 @@ function SearchRate() {
           <a className="searchRate_button" href="/searchRate">Search & Rate</a>
           <a className="soulmates_button" href="">Soulmates</a>
         </nav>
-        <div className="search_bar">
-          <SearchBar className="search_input" getTracks={getTracks} />
-        </div>
       </header>
+      <SearchBar className="search_input" getTracks={getTracks} />
       <div className="tracks">
         {tracks && <TrackList tracks={tracks} />}
       </div>
