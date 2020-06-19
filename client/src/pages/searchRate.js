@@ -20,9 +20,9 @@ function SearchRate() {
     <div className="searchRate">
       <header className="searchRate_header_container">
         <nav className="nav_container">
-          <a className="my_ratings_button" href="/home">My ratings</a>
           <a className="searchRate_button" href="/searchRate">Search & Rate</a>
-          <a className="soulmates_button" href="">Soulmates</a>
+          <a className="my_ratings_button" href="/home">My ratings</a>
+          <a className="soulmates_button" href="/soulmates">Soulmates</a>
         </nav>
       </header>
       <SearchBar className="search_input" getTracks={getTracks} />

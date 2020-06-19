@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { GetRatingsByUser, GetSortedRatingsByUser } from '../services/dbService';
 import { getTracks } from '../services/spotifyService';
 import RatedList from '../components/ratedList/ratedList';
-import './home.css';
+import './soulmates.css';
 
-function HomePage() {
+function Soulmates() {
 
   const [rateList, setRateList] = useState(null);
   const [sorting, setSorting] = useState('date');
@@ -17,6 +17,7 @@ function HomePage() {
     
     if (sortingCode === 1) {
       res = await GetRatingsByUser()
+      console.log(res);
       setSorting('date');
     } else {
       res = await GetSortedRatingsByUser()
@@ -44,20 +45,20 @@ function HomePage() {
     <div className="home">
       <header className="home_header_container">
         <nav className="nav_container">
-          <a className="searchRate_button_" href="/searchRate">Search & Rate</a>
-          <a className="myRatings_button_" href="/home">My ratings</a>
-          <a className="soulmates_button_" href="/soulmates">Soulmates</a>
+          <a className="searchRate_button__" href="/searchRate">Search & Rate</a>
+          <a className="myRatings_button__" href="/home">My ratings</a>
+          <a className="soulmates_button__" href="/soulmates">Soulmates</a>
         </nav>
       </header>
-      <div className="sorting_buttons_container">
+      {/* <div className="sorting_buttons_container">
         <button className= {sorting === 'date' ? "selected_sorting_button" : "sorting_button"} onClick={() => { getTrackIds(1) }}>Sort by date</button>
         <button className={sorting === 'rating' ? "selected_sorting_button" : "sorting_button"} onClick={() => { getTrackIds(0) }}>Sort by rating</button>
       </div>
       <div className="ratings_container">
         {(rateList) && <RatedList className="rated_list" ratedTracks={rateList} />}
-      </div>
+      </div> */}
     </div>
   );
 }
 
-export default HomePage;
+export default Soulmates;
