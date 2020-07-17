@@ -1,45 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { GetRatingsByUser, GetSortedRatingsByUser } from '../services/dbService';
-import { getTracks } from '../services/spotifyService';
-import RatedList from '../components/ratedList/ratedList';
+import React from 'react';
 import './soulmates.css';
 
 function Soulmates() {
-
-  const [rateList, setRateList] = useState(null);
-  const [sorting, setSorting] = useState('date');
-
-  async function getTrackIds(flag) {
-    let res = [];
-    const trackIds = [];
-    const trackRatings = [];
-    const sortingCode = flag;
-    
-    if (sortingCode === 1) {
-      res = await GetRatingsByUser()
-      console.log(res);
-      setSorting('date');
-    } else {
-      res = await GetSortedRatingsByUser()
-      setSorting('rating');
-    }
-
-    res.forEach((track) => {
-      trackIds.push(track.trackId);
-      trackRatings.push(track.rating);
-    });
-    
-    const spotifyTrackList = await getTracks(trackIds);
-    for (let i = 0; i < trackRatings.length; i++) {
-      spotifyTrackList.tracks[i].rating = trackRatings[i]; // insert track rating to each track on spotify res obj.
-    }
-
-    setRateList(spotifyTrackList);
-  }
-
-  useEffect(() => {
-    getTrackIds(1);
-  }, []);
 
   return (
     <div className="home">
@@ -50,13 +12,6 @@ function Soulmates() {
           <a className="soulmates_button__" href="/soulmates">Soulmates</a>
         </nav>
       </header>
-      {/* <div className="sorting_buttons_container">
-        <button className= {sorting === 'date' ? "selected_sorting_button" : "sorting_button"} onClick={() => { getTrackIds(1) }}>Sort by date</button>
-        <button className={sorting === 'rating' ? "selected_sorting_button" : "sorting_button"} onClick={() => { getTrackIds(0) }}>Sort by rating</button>
-      </div>
-      <div className="ratings_container">
-        {(rateList) && <RatedList className="rated_list" ratedTracks={rateList} />}
-      </div> */}
     </div>
   );
 }
