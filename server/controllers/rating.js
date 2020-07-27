@@ -7,7 +7,7 @@ async function getAllRatings(req, res) {
     res.status(200);
     res.json(ratingsList);
   } catch (error) {
-        console.log(error); //eslint-disable-line
+      console.log(error); //eslint-disable-line
     res.sendStatus(500);
   }
 }
@@ -67,10 +67,10 @@ async function insertOrUpdateRating(req, res) {
       { rating: req.body.rating },
       {
         where:
-                {
-                  userName: req.body.userName,
-                  trackId: req.body.trackId,
-                },
+          {
+            userName: req.body.userName,
+            trackId: req.body.trackId,
+          },
       },
     );
     res.status(201);
