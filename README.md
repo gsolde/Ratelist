@@ -66,6 +66,6 @@ More features will be added soon. Stay tuned!
   
     - Implement testing.
     - Rated songs filtering and spotify playlist creation based on track selection.
-    - Soulmate algorythm implementation.
+    - Soulmate algorithm implementation.
     - Automatic playlist creation based on soulmate preferences.
     - Rating stats & graphics in a dashboard with genre information vs rating, etc.
